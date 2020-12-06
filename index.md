@@ -47,13 +47,10 @@ Ahora vamos a añadir las resoluciones que queremos usar en modo HiDPI, para ell
 "IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@2/display0/AppleDisplay-10ac-d06e"
 ```
 
-Todos los monitores externos se identifican con AppleDisplay y los internos con AppleBacklightDisplay. Para seleccionar el monitor externo debemos quedarnos con la línea que que contenga AppleBacklightDisplay:
+Todos los monitores externos se identifican con _AppleDisplay_ y los internos con _AppleBacklightDisplay_. Para seleccionar el monitor externo debemos quedarnos con la línea que que contenga _AppleBacklightDisplay_:
 ```markdown
 "IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0/display0/AppleBacklightDisplay-610-a019"
 ```
-
-
-
 
 
 
