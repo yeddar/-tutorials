@@ -81,7 +81,9 @@ En caso de que el anterior comando dé error de directorio de sólo lectura, deb
 ### Sólo realizar en caso de error al intentar crear el directorio
 1) Apagar el equipo. Una vez apagado arrancarlo presionando las teclas Comando + R. Esperar a que aparezca la ventana de utilidades.
 2) En la barra de herramientas superior debes seleccionar Utilidades > Terminal
-3) En la terminal introducir el comando `csrutil` para deshabilitar la protección de directorios del sistema.
+3) En la terminal introducir el comando `csrutil disable` para deshabilitar la protección de directorios del sistema.
+4) Si con esto sigue sin funcionar, puede que sea porque tienes una versión igual o superior a MacOS Catalina en la que las carpetas del sistema y el contenido de usario residen en particiones distintas del disco y la partición que reside las carpetas del sistema está montada en modo sólo lectura, para montarla en modo escritura hasta el próximo reninicio debes ejecutar lo siguiente: `sudo mount -uw /`
+
 
 ### Volviendo al tema
 
