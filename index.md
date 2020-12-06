@@ -62,9 +62,10 @@ Estos valores tienen un significado: DisplayProductID: `65cf`, DisplayVendorID: 
 ![Image](image-1.png)
 
 7) En este punto ya debemos tener el fcihero descargado en la carpeta elegida para la descarga. Ahora debemos copiar el fichero en la ruta especificada arriba a la derecha en la web donde hemos descargado el fichero. En mi caso:
-- Display PropertyList Filename
-`/System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae/DisplayProductID-65cf`
-
+Display PropertyList Filename
+```markdown
+/System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae/DisplayProductID-65cf
+```
 
 
 ### Añadir resoluciones HiDPI
