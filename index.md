@@ -12,12 +12,30 @@ Supongo que todos conocemos la importancia de la resolución de pantalla en un t
 
 Esto es muy importante y puede que ya lo sepas pero... hay una FUERTE relación entre la resolución de pantalla y las dimensiones de ésta. Existe un número clave que es el ppi (Pixels Per Inch) o píxeles por pulgada. El número ppi depende de la rasolución y las pulgadas de la pantalla, es decir, en una pantalla de 24 pulgadas con resolución 2K obtendremos un mayor ppi que en una de 32 pulgadas con la misma resolución, obvio, ¿no? 
 
-A esto me refería con las técnicas de marketing, es fácil encontrar televisores desde las 43 pulgadas a las 60" o más con resoluciones 4K, pero no es tan fácil (ni tan barato) encontrar televisores 4K de 32 pulgadas o menos. Pues, ¿la última pregunta es fácil de responder no? hay muy poco mercado de monitores de 24 pulgadas con 4K e incluso 2K, en un monitor de estas dimensiones, aumentar la resolución implica aumentar drásticamente el ppi, o lo que es lo mismo, diseñar paneles de más calidad, lo que igual a las empresas les resulta un poco más caro...
+A esto me refería con las técnicas de marketing, que es fácil encontrar televisores desde las 43 pulgadas a las 60 con resoluciones 4K, pero no es tan fácil (ni tan barato) encontrar televisores 4K de 32 o menos pulgadas. Pues, ¿la última pregunta es fácil de responder no? Hay muy poco mercado de monitores de 24 pulgadas con 4K o 2K ya que en un monitor de estas dimensiones, aumentar la resolución implica aumentar drásticamente el ppi, o lo que es lo mismo, aumento en los costes de producción... en resumen, lo que interesa es hacer publicidad de televisores 4K de grandes pulgadas porque es lo que sale más barato para las empresas y lo que parece más llamativo o mejor para los clientes, aunque luego no lo sea.
 
 
 ## La pantalla Retina de Apple
 
-Las pantallas "Retina" de Apple lucen bastante bien, de hecho, en mi opinión es de las mejores pantallas que he visto en un ordenador portátil. La mayoría de portátiles de 2020 vienen con pantallas Full HD mientras que el MacBook de 2015 ya venía con una pantalla con el doble de resolución, es decir 2K. Una alta resolución de pantalla normalmente implica que el tamaño de los iconos, ventanas y texto se vea bastante reducido, como pasaría en el MacBook con su pantalla 2K... prácticamente no veríamos el texto, sería enano a no ser... que la tecnología Retina diera con la "solución".  
+Las pantallas "Retina" incorporadas en los dispositivos de Apple lucen bastante bien, de hecho, la pantalla de mi MacBook de 2015, en mi opinión es de las mejores pantallas que he visto en un ordenador portátil. La mayoría de portátiles de 2020 vienen con pantallas Full HD mientras que los MacBook Pro de 2015 ya venían con una pantalla con exactamente el doble de resolución. 
+
+Una alta resolución de pantalla normalmente implica que el tamaño de los iconos, ventanas y texto se vea bastante reducido, como pasaría en el MacBook con su pantalla 2K... prácticamente no veríamos el texto, sería enano a no ser que... la tecnología Retina diera con una especie de solución o una técnica que para nada tiene misterios. Lo que hace Apple con sus pantallas Retina es aumentar o escalar la resolución de forma que el usuario ve una resolución menor (escalada) con más píxeles por pulgada, lo que se traduce en una mayor nitidez de imagen que hace que prácticamente el ojo humano no pueda ver los píxeles a más de 15 cm de la pantalla. 
+
+Todo esto está muy bien pero... ¿qué pasa si conectamos una pantalla externa al portátil? pues lo que puede pasar es que se utilice la resolución por defecto del monitor, y si esta resolución es 2K o 4K pues las cosas se van a ver muuuuy pequeñitas, esto es debido a que probablemente no sea compatible el modo HiDPI que básicamente es el sistema que utilizan las pantallas "Retina" para realizar este escalado de resolución que acabo de comentar.
+
+
+## Cómo hablilitar el modo HiDPI
+
+Vamos a activar el modo HiDPI para el monitor externo. Para seguir con los pasos a continuación, debes ser administrador del sistema o tener priviliegios para ejecutar comandos como admiistrado en una terminal.
+
+### Habilitar modo HiDPI
+1) Abrimos la aplicación "Terminal".
+2) El siguiente comando habilita el modo HiDPI (debes copiarlo y pegarlo en la terminal que has abierto).
+```markdown
+sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true
+```
+
+
 
 You can use the [editor on GitHub](https://github.com/yeddar/tutorials/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -27,7 +45,10 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
+
+
+
+
 Syntax highlighted code block
 
 # Header 1
@@ -43,7 +64,7 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
