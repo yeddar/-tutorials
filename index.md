@@ -74,7 +74,7 @@ sudo cp ~/Downloads/DisplayProductID-65cf.plist /System/Library/Displays/Content
 Puede que el directorio `/System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae` no exista, si no existe, debemos ejecutar el siguiente comando para crearlo:
 ```markdown
 
-sudo mkdir -p /System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae/DisplayProductID-65cf
+sudo mkdir -p /System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae
 ```
 En caso de que el anterior comando dé error de directorio de sólo lectura, deberás realizar los siguientes pasos:
 
