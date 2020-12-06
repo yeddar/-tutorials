@@ -31,9 +31,7 @@ Vamos a activar el modo HiDPI para el monitor externo. Para seguir con los pasos
 ### Habilitar modo HiDPI
 1) Abrimos la aplicación "Terminal".
 2) El siguiente comando habilita el modo HiDPI (debes copiarlo y pegarlo en la terminal que has abierto).
-`sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true
-
-
+`sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true`
 
 ### Añadir resoluciones HiDPI
 Ahora vamos a añadir las resoluciones que queremos usar en modo HiDPI, para ello debemos editar un archivo concreto, debemos saber cuál es así que para averiguarlo necesitamos conocer alguna información sobre el monitor. 
@@ -43,16 +41,19 @@ Ahora vamos a añadir las resoluciones que queremos usar en modo HiDPI, para ell
 
 2) Debería aparecer algo parecido a...
 ```markdown
-"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0/display0/AppleBacklightDisplay-610-a019"
-"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@2/display0/AppleDisplay-10ac-d06e"
+"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0/display0/AppleBacklightDisplay-610-a029"
+"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@2/display0/AppleDisplay-30ae-65cf"
 ```
 
 Todos los monitores externos se identifican con _AppleDisplay_ y los internos con _AppleBacklightDisplay_. Para seleccionar el monitor externo debemos quedarnos con la línea que que contenga _AppleBacklightDisplay_:
 ```markdown
-"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0/display0/AppleBacklightDisplay-610-a019"
+"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0/display0/AppleBacklightDisplay-610-a029"
 ```
+3) Nos fijamos en el fragmento a partir de la última barra diagonal, en mi caso: `AppleBacklightDisplay-610-a019`
 
+4) De este fragmento nos quedamos con los valores después del primer guión, en mi caso: `610-a019`
 
+Estos valores tienen un significado: DisplayVendorld: `610`, DisplayProductID: `a019`
 
 You can use the [editor on GitHub](https://github.com/yeddar/tutorials/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
