@@ -10,13 +10,14 @@ Bueno... vamos al grano, ya vale de criticar!
 
 Supongo que todos conocemos la importancia de la resolución de pantalla en un televisor, las empresas que fabrican televisores lo saben y se aprovechan de ello usando técnicas de marketing. No he hablado de las pulgadas de mi monitor... bueno pues es de 24 pulgadas, no está mal, mmm... ¿pero... por qué no más grande? Pues para un monitor digamos que "el tamaño no importa" de cierta forma.
 
-Esto es muy importante y puede que ya lo sepas pero... hay una FUERTE relación entre la resolución de pantalla y las dimensiones de ésta. Existe un número clave que es el ppi (Pixels Per Inch) o píxeles por pulgada. El número ppi depende de la rasolución y las pulgadas de la pantalla, es decir, en una pantalla de 24 pulgadas con resolución 2K obtendremos un mayor ppi que en una de 32 pulgadas con la misma resolución, obvio, ¿no?. Es decir, que la pantalla de 32 pulgadas tendrá un ppi similar a una de 24" pero con resolución FullHD.
+Esto es muy importante y puede que ya lo sepas pero... hay una FUERTE relación entre la resolución de pantalla y las dimensiones de ésta. Existe un número clave que es el ppi (Pixels Per Inch) o píxeles por pulgada. El número ppi depende de la rasolución y las pulgadas de la pantalla, es decir, en una pantalla de 24 pulgadas con resolución 2K obtendremos un mayor ppi que en una de 32 pulgadas con la misma resolución, obvio, ¿no? 
+
+A esto me refería con las técnicas de marketing, es fácil encontrar televisores desde las 43 pulgadas a las 60" o más con resoluciones 4K, pero no es tan fácil (ni tan barato) encontrar televisores 4K de 32 pulgadas o menos. Pues, ¿la última pregunta es fácil de responder no? hay muy poco mercado de monitores de 24 pulgadas con 4K e incluso 2K, en un monitor de estas dimensiones, aumentar la resolución implica aumentar drásticamente el ppi, o lo que es lo mismo, diseñar paneles de más calidad, lo que igual a las empresas les resulta un poco más caro...
 
 
+## La pantalla Retina de Apple
 
-
-
-Vamos al grano. Está muy de moda el 4K en los paneles TV
+Las pantallas "Retina" de Apple lucen bastante bien, de hecho, en mi opinión es de las mejores pantallas que he visto en un ordenador portátil. La mayoría de portátiles de 2020 vienen con pantallas Full HD mientras que el MacBook de 2015 ya venía con una pantalla con el doble de resolución, es decir 2K. Una alta resolución de pantalla normalmente implica que el tamaño de los iconos, ventanas y texto se vea bastante reducido, como pasaría en el MacBook con su pantalla 2K... prácticamente no veríamos el texto, sería enano a no ser... que la tecnología Retina diera con la "solución".  
 
 You can use the [editor on GitHub](https://github.com/yeddar/tutorials/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
