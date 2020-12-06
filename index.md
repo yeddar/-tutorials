@@ -31,9 +31,29 @@ Vamos a activar el modo HiDPI para el monitor externo. Para seguir con los pasos
 ### Habilitar modo HiDPI
 1) Abrimos la aplicación "Terminal".
 2) El siguiente comando habilita el modo HiDPI (debes copiarlo y pegarlo en la terminal que has abierto).
+`sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true
+
+
+
+### Añadir resoluciones HiDPI
+Ahora vamos a añadir las resoluciones que queremos usar en modo HiDPI, para ello debemos editar un archivo concreto, debemos saber cuál es así que para averiguarlo necesitamos conocer alguna información sobre el monitor. 
+
+1) Ejecutamos el comando en la terminal:
+`ioreg -lw0 | grep IODisplayPrefsKey`
+
+2) Debería aparecer algo parecido a...
 ```markdown
-sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true
+"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0/display0/AppleBacklightDisplay-610-a019"
+"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@2/display0/AppleDisplay-10ac-d06e"
 ```
+
+Todos los monitores externos se identifican con AppleDisplay y los internos con AppleBacklightDisplay. Para seleccionar el monitor externo debemos quedarnos con la línea que que contenga AppleBacklightDisplay:
+```markdown
+"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0/display0/AppleBacklightDisplay-610-a019"
+```
+
+
+
 
 
 
