@@ -67,8 +67,27 @@ Display PropertyList Filename
 /System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae/DisplayProductID-65cf
 ```
 
+8) Copiamos el fichero descargado:
+```markdown
+sudo cp ~/Downloads/DisplayProductID-65cf.plist /System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae/DisplayProductID-65cf
+```
+Puede que el directorio `/System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae` no exista, si no existe, debemos ejecutar el siguiente comando para crearlo:
+```markdown
 
-### Añadir resoluciones HiDPI
+sudo mkdir -p /System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-30ae/DisplayProductID-65cf
+```
+En caso de que el anterior comando dé error de directorio de sólo lectura, deberás realizar los siguientes pasos:
+
+### Sólo realizar en caso de error al intentar crear el directorio
+1) Apagar el equipo. Una vez apagado arrancarlo presionando las teclas Comando + R. Esperar a que aparezca la ventana de utilidades.
+2) En la barra de herramientas superior debes seleccionar Utilidades > Terminal
+3) En la terminal introducir el comando `csrutil` para deshabilitar la protección de directorios del sistema.
+
+### Volviendo al tema
+
+8) Una vez copiado el fichero, deberás reiniciar el equipo.
+
+### Instalar la herramienta gratuita RDM
 
 You can use the [editor on GitHub](https://github.com/yeddar/tutorials/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
