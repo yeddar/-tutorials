@@ -34,7 +34,7 @@ Vamos a activar el modo HiDPI para el monitor externo. Para seguir con los pasos
 `sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true`
 
 ### Añadir resoluciones HiDPI
-Ahora vamos a añadir las resoluciones que queremos usar en modo HiDPI, para ello debemos editar un archivo concreto, debemos saber cuál es así que para averiguarlo necesitamos conocer alguna información sobre el monitor. 
+Ahora vamos a añadir las resoluciones que queremos usar en modo HiDPI, para ello debemos generar un fichero en el que se incluirá alguna información necesaria sobre el monitor y sobre las resoluciones. 
 
 1) Ejecutamos el comando en la terminal:
 `ioreg -lw0 | grep IODisplayPrefsKey`
@@ -47,13 +47,21 @@ Ahora vamos a añadir las resoluciones que queremos usar en modo HiDPI, para ell
 
 Todos los monitores externos se identifican con _AppleDisplay_ y los internos con _AppleBacklightDisplay_. Para seleccionar el monitor externo debemos quedarnos con la línea que que contenga _AppleBacklightDisplay_:
 ```markdown
-"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0/display0/AppleBacklightDisplay-610-a029"
+"IODisplayPrefsKey" = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@2/display0/AppleDisplay-30ae-65cf"
 ```
-3) Nos fijamos en el fragmento a partir de la última barra diagonal, en mi caso: `AppleBacklightDisplay-610-a019`
+3) Nos fijamos en el fragmento a partir de la última barra diagonal, en mi caso: `AppleDisplay-30ae-65cf`
 
-4) De este fragmento nos quedamos con los valores después del primer guión, en mi caso: `610-a019`
+4) De este fragmento nos quedamos con los valores después del primer guión, en mi caso: `30ae-65cf`
 
-Estos valores tienen un significado: DisplayVendorld: `610`, DisplayProductID: `a019`
+Estos valores tienen un significado: DisplayProductID: `65cf`, DisplayVendorID: `30ae`. Nos servirán ahora para editar el fichero correspondiente.
+
+5) Ahora vamos a generar el fichero de resoluciones. Accedemos a [esta web](https://codeclou.github.io/Display-Override-PropertyList-File-Parser-and-Generator-with-HiDPI-Support-For-Scaled-Resolutions/) para generar el fichero. Debemos rellenar la tabla de la izquierda con la información que acabamos de obtener del monitor. Necesitamos conocer el DisplayVendorID y el DisplayProductID. Seguidamente vamos a ir eliminando o añadiendo resoluciones en la tabla. Yo me he basado en las resoluciones que me permite seleccionar para mi monitor desde Ajustes > Pantallas marcando el botón "Escalado".
+
+6) Una vez terminemos de editar la tabla, descargamos el fichero, hay un botón en la web al lado de "Reset Plist"
+
+![Image](image-1.png)
+
+### Añadir resoluciones HiDPI
 
 You can use the [editor on GitHub](https://github.com/yeddar/tutorials/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
